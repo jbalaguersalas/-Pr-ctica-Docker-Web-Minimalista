@@ -1,0 +1,106 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand, .nav, .footer__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.nav__link, .tag, .btn-explore, .project-detail__tag, .footer__links a, .copyright {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav__link--active { color: #d82b9d; }
+
+.intro-text {
+  margin: 30px 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 24px 0;
+  border-top: 1px solid #ddd;
+}
+
+.project-card img, .project-detail__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-card h2, .project-detail__title {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+.btn-explore {
+  border: 1px solid;
+  padding: 3px 6px;
+  display: inline-block;
+}
+
+.project-card:nth-child(1), .project-card:nth-child(5), .project-detail__tag, .project-detail__title { color: #4c6fc4; }
+.project-card:nth-child(2) { color: #d42b9d; }
+.project-card:nth-child(3) { color: #92832d; }
+.project-card:nth-child(4) { color: #7254b7; }
+
+footer { margin-top: 40px; }
+footer hr { border: 0; border-top: 1px solid #ddd; }
+.about__image {
+  width: 325px;
+  height: 325px;
+  object-fit: cover; 
+}
+@media (min-width: 800px) {
+  .header { height: 70px; }
+  .header__avatar { width: 25px; height: 25px; }
+  .intro-text { max-width: 480px; font-size: 22px; margin: 40px 0; }
+  
+  .project-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .project-info { width: 45%; }
+  .project-card img { width: 325px; height: 325px; }
+  .project-detail__title { font-size: 32px; }
+}
+
+@media (min-width: 1280px) {
+  .intro-text { max-width: 800px; font-size: 28px; margin: 60px 0; }
+  .project-card img { width: 50%; height: auto; }
+}
