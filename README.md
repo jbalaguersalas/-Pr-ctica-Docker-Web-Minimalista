@@ -40,14 +40,6 @@ docker build -t web-minimalista .
 docker run -p 8080:80 web-minimalista
 ```
 
-## Qué aprendí
-
-**Que una imagen de Docker se construye por capas.** Con `FROM nginx:alpine` ya tengo un servidor web hecho. Yo solo añado una capa encima con `COPY . /usr/share/nginx/html`, que es donde nginx busca los archivos.
-
-**Que el contenedor tiene sus propios puertos.** Dentro, nginx escucha en el 80. Si no pongo `"8080:80"` en el compose, la web está funcionando pero yo no puedo entrar desde el navegador.
-
-**Para qué sirve el `.dockerignore`.** Con `COPY .` se copia todo lo que hay en la carpeta. Sin el `.dockerignore` la carpeta `.git` también acabaría dentro de la imagen, y no pinta nada ahí.
-
 ## README original
 
 El repositorio empezó con este README que crea GitHub:
